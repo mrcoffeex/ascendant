@@ -1,0 +1,7 @@
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Mercury Retail</title>
+  <circle cx="32" cy="40" r="24" fill="#2f3033"/>
+  <path d="M24 40h16M32 32v16" stroke="#f3f3f3" stroke-width="4" stroke-linecap="round"/>
+  <text x="68" y="46" fill="#2f3033" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="0.6">MERCURY</text>
+  <text x="68" y="64" fill="#5b5d61" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">RETAIL</text>
+</svg>
