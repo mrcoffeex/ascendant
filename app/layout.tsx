@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+import brandIcon from "./icon.png";
+import { MotionReadout } from "./components/MotionReadout";
+import { PageLoader } from "./components/PageLoader";
+import { ScrollEffects } from "./components/ScrollEffects";
+import { SiteFrame } from "./components/SiteFrame";
 import "./globals.css";
 
 const display = Bebas_Neue({
@@ -18,7 +23,8 @@ export const metadata: Metadata = {
   description:
     "Ascendant offers software development, SaaS, website, and ecommerce services.",
   icons: {
-    icon: "/icon.svg",
+    icon: [{ url: brandIcon.src, type: "image/png" }],
+    apple: [{ url: brandIcon.src, type: "image/png" }],
   },
 };
 
@@ -30,9 +36,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <PageLoader />
+        <ScrollEffects />
+        <SiteFrame />
+        <MotionReadout />
+        <div className="site-noise" aria-hidden="true" />
+        {children}
+      </body>
     </html>
   );
 }
